@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Welcome to our movie store.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Please make your selection below</h1>
+        <div class="dropdown">
+            <div class="dropdown-content">
+                <select name="movie" id="movieId">
+                    <option value='Browse Movies'>Browse Movies</option>
+                    <option value='Add New Movie to database'>Add New Movie to database</option>
+                </select>
+                
+            <button onclick="myFunction()">Send</button>
+            </div>
+        </div><br />
+        
+        <script>
+            function myFunction() {
+              
+              var index = document.getElementById("movieId").selectedIndex;
+              if(index == 0){
+                  location.replace("http://localhost:8080/Assignment2_Part7/SearchMovie.jsp");
+              }else{
+                  location.replace("http://localhost:8080/Assignment2_Part7/AddNewMovie.jsp");
+              }
+            }
+        </script>
+    </body>
+</html>
